@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#2e7d32" />
   <meta name="description" content="App educativa que usa una IA entrenada en Teachable Machine para reconocer residuos reciclables o no reciclables.">
   <link rel="stylesheet" href="styles.css" />
-  <!-- Librerías de IA (deben cargarse antes de app.js) -->
+  <!-- Librerías de IA -->
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
 </head>
@@ -15,7 +15,6 @@
   <header class="site-header">
     <div class="brand">
       <div class="logo3d" aria-hidden="true">
-        <!-- Ícono reciclaje en SVG -->
         <svg viewBox="0 0 24 24" width="30" height="30" role="img" aria-label="Reciclaje">
           <path d="M16.5 6l-1.06 1.82 1.44 2.5h-2.88L12 8l1.06-1.82L10.5 3h3l3 3zM7.5 18l1.06-1.82-1.44-2.5h2.88L12 16l-1.06 1.82L13.5 21h-3l-3-3zM3 10.5L4.82 9.44 7.32 10.88V8l2-1.15v3.27l2.68 1.55-2 1.15-2.32-1.34V14L3 12.5v-2z" fill="currentColor"/>
         </svg>
@@ -42,7 +41,6 @@
 
       <div id="webcam-wrap">
         <div id="webcam-container" class="webcam-shell">
-          <!-- canvas de la webcam se inserta por JS -->
           <div id="webcam-placeholder" class="placeholder">
             <div class="placeholder-icon">📷</div>
             <p>Presioná <b>Iniciar cámara</b> para comenzar.</p>
@@ -68,9 +66,7 @@
         </div>
       </div>
 
-      <div class="bars" id="bars">
-        <!-- Barras de probabilidad generadas por JS -->
-      </div>
+      <div class="bars" id="bars"></div>
       <details class="tip">
         <summary>Consejo de uso</summary>
         <p>Acercá un objeto a la cámara, mantenelo estable y con buena luz. Evitá fondos muy recargados.</p>
@@ -111,14 +107,6 @@
           </div>
         </div>
       </div>
-      <details class="tip">
-        <summary>Publicar en GitHub Pages</summary>
-        <ol>
-          <li>Subí <code>index.html</code>, <code>styles.css</code> y <code>app.js</code> a un repo.</li>
-          <li>En <em>Settings &gt; Pages</em>, elegí la rama (p. ej. <code>main</code>) y carpeta <code>/</code>.</li>
-          <li>Abrí la URL que te da GitHub Pages (HTTPS requerido para cámara).</li>
-        </ol>
-      </details>
     </section>
   </main>
 
@@ -127,7 +115,6 @@
     <div class="note small">Esta es una app educativa. La IA puede cometer errores; usá criterio humano.</div>
   </footer>
 
-  <!-- App -->
   <script src="app.js"></script>
 </body>
 </html>
